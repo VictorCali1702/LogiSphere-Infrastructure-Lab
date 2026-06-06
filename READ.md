@@ -1,16 +1,49 @@
 # LogiSphere Infrastructure Lab
 
+## Project Status
+Current Phase: Active Directory Deployment
+
+Completed:
+- Base Server Configuration
+- Active Directory Installation
+
+In Progress:
+- Organizational Units (OU)
+- User Management
+
+Planned:
+- Group Policy Objects (GPO),
+- Shared Folders
+- Windows 11 Domain Client
+
 ## Project Overview
 
 This project simulates the IT infrastructure of a logistics company using 
-Windows Server 2022 and Active Directory .
+Windows Server 2022 and Active Directory.
 
-## Eviroment
+## Lab Scenario
+LogiSphere is a fictional logistics company used for learning and testing Windows Server administration.
+
+Departments:
+- IT
+- HR
+- Accounting
+- Warehouse
+- Managment
+
+Infrasctructure Goals:
+- Centralized authentication
+- User and group management
+- Group Policy administration
+- Shared folders and permissions
+- Domain-joined client computers
+
+## Evironment
 - Windows Server 2022,
 - Oracle VirtualBox
 - Windows 11 Client (planned)
-- Active Directory (planned)
-- Domain: Logisphere.local (planned)
+- Active Directory Domain Services (AD DS)
+- Domain: logisphere.local
 
 ## Phase 1 - Base Server Configuration
 
@@ -29,6 +62,8 @@ Completed:
 
 ### Static IP Configuration
 ![Static IP](screenshots/static-IP-configured.png)
+
+## Phase 2 - Active Directory Deployment
 
 ### Active Directory Domain Services Installed
 Successfully installed the Active Directory Domain Services (AD DS) role on DC01.
@@ -77,3 +112,20 @@ After Active Directory Domain Services installation and server promotion, DC01 s
 Login account: LOGISPHERE\Administrator
 Domain: logisphere.local
 ![Domain Controller Login](screenshots/domain-controller-login-screen.png)
+
+### Active Directory Managment Tools Available
+
+After promoting DC01 to a Domain Controller, Active Directory managment tools became available in Server Manager.
+Installed managment tools:
+- Active Directory Users and Computers
+- Active Directory Administrative Center
+- Active Directory Domains and Trusts
+- Active Directory Sites and Services
+- DNS Manager
+- Group Policy Management
+
+The server is fully operational as a Domain Controller for the LogiSphere domain.
+![AD tools](screenshots/ad-tools-available.png)
+
+## Phase 3 - Organizational Unit Structure
+
