@@ -233,3 +233,18 @@ Example:
 Inheritance was disabled to ensure department specific access control.
 
 ![NTFS Advanced](screenshots/department-shares-advanced.png)
+
+### SMB Network Shares
+
+Configured SMB network shares for all company departments.
+Available shared folders:
+- Accounting
+- HR
+- IT
+- Management
+- Warehouse
+
+Verified network access using: \\localhost
+
+The shares are accessible over the network and integrated with Active Directory security groups and NTFS permissions.
+![SMB Shares](screenshots/smb-shares.png)
