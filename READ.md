@@ -163,32 +163,54 @@ The account was created inside the IT Organizational Unit (OU) following the com
 
 ![First Domain User](screenshots/first-domain-user-created.png)
 
-## Department Users Accounts Created
+### Department Users Accounts Created
 
 Created domain user accounts for all LogiSphere departments.
 
-IT
+### IT
 - Lukas Schneider
 - Felix Weber
 ![It-users](screenshots/it-users.png)
 
-HR
+### HR
 - Anna Berg
 - Julia Fischer
 ![HR-users](screenshots/hr-users.png)
 
-Accounting
+### Accounting
 - Thomas Becker
 - Sandra Wagner
 ![Accounting-users](screenshots/accounting-users.png)
 
-Warehouse
+### Warehouse
 - Michael Hoffmann
 - Kevin Schulz
 ![Warehouse-users](screenshots/warehouse-users.png)
 
-Management
+### Management
 - Markus Kaiser
 ![Management-users](screenshots/management-users.png)
 
 Each user account was created inside its corresponding Organizational Unit (OU) to maintain a structured Active Directory environment.
+
+## Phase 5 - Security Groups
+
+Created dedicated Active Directory Security Groups for each department.
+
+Security Groups:
+- GG_IT
+- GG_HR
+- GG_ACCOUNTING
+- GG_WAREHOUSE
+- GG_MANAGEMENT
+
+All groups were created as:
+- Group Scope: Global
+- Group Type: Security
+
+Departments users were assigned to their corresponing security groups to simplify permission management and feature access control configuration.
+
+### Department Security Groups
+
+![Security Groups](!screenshots/security-groups-created.png)
+
