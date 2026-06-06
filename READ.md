@@ -29,16 +29,16 @@ Departments:
 - HR
 - Accounting
 - Warehouse
-- Managment
+- Management
 
-Infrasctructure Goals:
+Infrastructure Goals:
 - Centralized authentication
 - User and group management
 - Group Policy administration
 - Shared folders and permissions
 - Domain-joined client computers
 
-## Evironment
+## Environment
 - Windows Server 2022,
 - Oracle VirtualBox
 - Windows 11 Client (planned)
@@ -113,7 +113,7 @@ Login account: LOGISPHERE\Administrator
 Domain: logisphere.local
 ![Domain Controller Login](screenshots/domain-controller-login-screen.png)
 
-### Active Directory Managment Tools Available
+### Active Directory Management Tools Available
 
 After promoting DC01 to a Domain Controller, Active Directory managment tools became available in Server Manager.
 Installed managment tools:
@@ -129,3 +129,66 @@ The server is fully operational as a Domain Controller for the LogiSphere domain
 
 ## Phase 3 - Organizational Unit Structure
 
+### Organizational Units Created
+
+Created the Organizational Unit (OU) structure for the LogiSphere Active Directory environment.
+
+Departments:
+- IT
+- HR
+- Accounting
+- Warehouse
+- Management
+
+Additional Organizational Units:
+- Groups
+- Workstations
+
+This structure will be used to organize users, computers, security groups and Group Policy Objects (GPOs).
+![OU Structure](screenshots/ou-structure-created.png)
+
+## Phase 4 - User Management
+
+### First Domain User Created
+
+Created the first domain user account for the LogiSphere Active Directory environment.
+
+User details:
+- Name: Lukas Schneider
+- Department: IT
+- Username: l.schneider
+- Domain: logisphere.local
+
+The account was created inside the IT Organizational Unit (OU) following the company structure.
+
+![First Domain User](screenshots/first-domain-user-created.png)
+
+## Department Users Accounts Created
+
+Created domain user accounts for all LogiSphere departments.
+
+IT
+- Lukas Schneider
+- Felix Weber
+![It-users](screenshots/it-users.png)
+
+HR
+- Anna Berg
+- Julia Fischer
+![HR-users](screenshots/hr-users.png)
+
+Accounting
+- Thomas Becker
+- Sandra Wagner
+![Accounting-users](screenshots/accounting-users.png)
+
+Warehouse
+- Michael Hoffmann
+- Kevin Schulz
+![Warehouse-users](screenshots/warehouse-users.png)
+
+Management
+- Markus Kaiser
+![Management-users](screenshots/management-users.png)
+
+Each user account was created inside its corresponding Organizational Unit (OU) to maintain a structured Active Directory environment.
