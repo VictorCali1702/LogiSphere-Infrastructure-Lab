@@ -208,9 +208,28 @@ All groups were created as:
 - Group Scope: Global
 - Group Type: Security
 
-Departments users were assigned to their corresponing security groups to simplify permission management and feature access control configuration.
+Department users were assigned to their corresponing security groups to simplify permission management and feature access control configuration.
 
 ### Department Security Groups
 
 ![Security Groups](!screenshots/security-groups-created.png)
 
+## Phase 6 - File Server and NTFS Permissions
+
+### Department Shared Folders
+
+Created departmental shared folders and configured NTFS permissions based on Active Directory Security Groups.
+![NTFS Permissions](screenshots/department-shares.png)
+
+### NTFS Permissions Configuration
+
+Configured NTFS permissions using Active Directory Security Groups.
+
+Example:
+- GG_IT = Modify
+- Administrators = Full Control
+- SYSTEM = Full Control
+
+Inheritance was disabled to ensure department specific access control.
+
+![NTFS Advanced](screenshots/department-shares-advanced.png)
