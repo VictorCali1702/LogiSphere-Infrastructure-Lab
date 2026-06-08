@@ -278,4 +278,19 @@ Result:
 
 ![Client Ping Test](screenshots/win10-ping-dc01.png)
 
+### DNS Resolution Test
+
+Verified DNS name resolution from the Windows 10 client using the Domain Controller DNS service.
+
+Tests performed:
+- nslookup dc01.logisphere.local
+- nslookup logisphere.local
+
+Results:
+- dc01.logisphere.local resolved to 192.168.10.10
+- logisphere.local resolved to 192.168.10.10
+
+The client was successfully communicates with the DNS service hosted on DC01.
+
+![DNS Resolution](screenshots/win10-dns-resolution.png)
 
