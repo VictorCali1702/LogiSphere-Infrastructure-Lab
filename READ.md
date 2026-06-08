@@ -248,3 +248,34 @@ Verified network access using: \\localhost
 
 The shares are accessible over the network and integrated with Active Directory security groups and NTFS permissions.
 ![SMB Shares](screenshots/smb-shares.png)
+
+## Phase 7 - Windows 10 Domain Client Deployment
+
+### Client Network Configuration
+
+Configured a Windows 10 client machine for communication with the Active Directory environment.
+
+Client Configuration:
+- Hostname: WIN10-CLIENT
+- IP Address: 192.168.10.20
+- Subnet Mask: 255.255.255.0
+- DNS Server: 192.168.10.10
+
+The client was connected to the LABNET internal network in Oracle VirtualBox.
+
+![Client Network Configuration](screenshots/win10-network-config.png)
+
+### Connectivity Verification
+
+Verified network communication between the Windows 10 client and the Domain Controller (DC01).
+
+Test:
+- ping 192.168.10.10
+
+Result:
+- Successful communication
+- 0% packet loss
+
+![Client Ping Test](screenshots/win10-ping-dc01.png)
+
+
