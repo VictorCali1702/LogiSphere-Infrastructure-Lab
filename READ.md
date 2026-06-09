@@ -294,3 +294,20 @@ The client was successfully communicates with the DNS service hosted on DC01.
 
 ![DNS Resolution](screenshots/win10-dns-resolution.png)
 
+## Phase 8 - Domain Join
+
+### Domain Join Preperation
+
+Opened the Windows 10 client computer name and domain membership settings.
+
+The client was still operating in the default WORKGROUP configuration before joining the Active Directory domain.
+
+![Domain Join Start](screenshots/domain-join-start.png)
+
+### Windows 10 Client Joined to Domain
+
+Successfully joined the Windows 10 client computer to the logisphere.local Active Directory domain.
+The domain join operation was completed using administrator credentials and the computer became a member of the LogiSphere infrastructure.
+
+![Domain Join Success](screenshots/domain-join-success.png)
+
