@@ -311,3 +311,33 @@ The domain join operation was completed using administrator credentials and the 
 
 ![Domain Join Success](screenshots/domain-join-success.png)
 
+### Domain User Authentication Verification
+
+Verified successful Active Directory authentication from the Windows 10 domain joined workstation.
+
+Commands executed:
+- whoami
+- hostname
+
+Results:
+- User: LOGISPHERE\l.schneider
+- Workstation: DESKTOP-VK87TV2
+
+The user was succesfully authenticated against Active Directory and received a domain profile.
+
+![Authentication Verification](screenshots/domain-user-login-verification.png)
+
+### Group Policy Verification
+
+Verified Active Directory authentication and Group Policy processing on the domain joined Windows 10 workstation using the gpresult /r command.
+
+Results:
+- User authenticated: LOGISPHERE\l.schneider
+- Domain Controller: DC01.logisphere.local
+- Domain: LOGISPHERE
+- User profile loaded successfully
+- Security group membership verified (GG_IT)
+- Group Policy processing completed successfully
+
+This confirm that the workstation is properly joined to the AD domain and can communicate with the Domain Controller.
+![GPResult Verification](screenshots/gpresult-domain-verification.png)
