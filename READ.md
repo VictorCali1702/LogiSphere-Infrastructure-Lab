@@ -344,16 +344,74 @@ This confirm that the workstation is properly joined to the AD domain and can co
 
 ## Phase 9 - Group Policy Objects (GPO)
 
-Created and linked a Group Policy Object (GPO) to the IT Organizational Unit in Active Directory.
-The policy was configured to block access to Control Panel and Windows Settings for users located in the IT OU.
+Created and linked multiple Group Policy Objects (GPOs) to the IT Organizational Unit in Active Directory.
 
-Validation steps:
-- Logged in with a domain user account (LOGISPHERE\l.schneider)
-- Forced Group Policy update using gpupdate /force
-- Verified successful policy deployment
-- Confirmed that access to Control Panel and Settings was restricted
+### Implemented Policies
 
-Result:
-Group Policy successfully applied and enforced on the Windows 10 domain-joined client.
+#### Control Panel Restriction
+Configured a user policy to prevent access to:
+- Control Panel
+- Windows Settings
+
+#### Password Policy
+Configured domain password requirements:
+- Password Complexity Requirements Enabled
+- Minimum Password Length: 8 characters
+- Password History Enabled
+- Maximum Password Age configured
+
+#### Account Lockout Policy
+Configured protection against brute-force attacks:
+- Account Lockout Threshold: 3 failed logon attempts
+- Account Lockout Duration: 30 minutes
+- Reset Lockout Counter After: 30 minutes
+
+### Validation Steps
+
+- Logged in using domain account (LOGISPHERE\l.schneider)
+- Forced Group Policy refresh using `gpupdate /force`
+- Verified applied policies using `gpresult`
+- Confirmed Control Panel restriction was enforced
+- Tested account lockout by entering incorrect passwords
+- Verified user account was automatically locked after 3 failed attempts
+
+### Active Directory Replication
+
+Validated Active Directory replication using:
+
+```cmd
+repadmin /syncall
+```
+
+Replication completed successfully with no errors.
+
+### Result
+
+Successfully deployed and validated:
+- User Restriction Policies
+- Password Policies
+- Account Lockout Protection
+- Active Directory Replication
+- Group Policy Processing and Troubleshooting
+
+The Windows 10 domain-joined client correctly received and enforced all configured policies.
 ![GPO DC01](screenshots/GPO-DC01.png)
 ![GPO Client](screenshots/GPO-Client.png)
+
+### Password Policy
+![Password Policy](screenshots/GPO-password.png)
+
+### Account Lockout Policy
+![Account Lockout Policy](screenshots/GPO-password.png)
+
+### Account Locked
+![Account Locked](screenshots/account-blocked.png)
+
+### GPO Verification
+![GPO Result](screenshots/gpresult-html-client.png)
+
+### Active Directory Replication
+![Repadmin Sync](screenshots/repadmin.png)
+
+
+
