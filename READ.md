@@ -341,3 +341,19 @@ Results:
 
 This confirm that the workstation is properly joined to the AD domain and can communicate with the Domain Controller.
 ![GPResult Verification](screenshots/gpresult-domain-verification.png)
+
+## Phase 9 - Group Policy Objects (GPO)
+
+Created and linked a Group Policy Object (GPO) to the IT Organizational Unit in Active Directory.
+The policy was configured to block access to Control Panel and Windows Settings for users located in the IT OU.
+
+Validation steps:
+- Logged in with a domain user account (LOGISPHERE\l.schneider)
+- Forced Group Policy update using gpupdate /force
+- Verified successful policy deployment
+- Confirmed that access to Control Panel and Settings was restricted
+
+Result:
+Group Policy successfully applied and enforced on the Windows 10 domain-joined client.
+![GPO DC01](screenshots/GPO-DC01.png)
+![GPO Client](screenshots/GPO-Client.png)
