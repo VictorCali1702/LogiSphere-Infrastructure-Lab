@@ -413,5 +413,34 @@ The Windows 10 domain-joined client correctly received and enforced all configur
 ### Active Directory Replication
 ![Repadmin Sync](screenshots/repadmin.png)
 
+## Phase 10 - Drive Mapping via Group Policy
+
+Created a Group Policy Object (GPO) to automatically map a departmental network drive for users located in the IT Organizational Unit.
+
+Configuration:
+- Created GPO: IT-Drive-Mapping
+- Linked GPO to IT OU
+- Configured Drive Mapping using Group Policy Preferences
+- Mapped network share \\DC01\IT
+- Assigned drive letter I:
+- Enabled automatic reconnect at user logon
+
+Validation steps:
+- Logged in as domain user (LOGISPHERE\l.schneider)
+- Forced Group Policy update using gpupdate /force
+- Logged off and signed in again
+- Verified successful drive mapping
+
+Result:
+The network drive was automatically mapped and appeared as:
+
+IT Department (I:)
+
+This demonstrates centralized drive deployment using Active Directory and Group Policy.
+
+![Drive Mapping GPO](screenshots/drive-mapping-gpo.png)
+
+![Mapped Network Drive](screenshots/drive-mapping-client.png)
+
 
 
