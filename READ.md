@@ -442,5 +442,24 @@ This demonstrates centralized drive deployment using Active Directory and Group 
 
 ![Mapped Network Drive](screenshots/drive-mapping-client.png)
 
+## Phase 11 - User Logon Script via Group Policy
+
+- Created a User Logon Script using Group Policy
+- Stored script in the GPO SYSVOL folder
+- Linked GPO to the IT Organizational Unit
+- Applied policy to domain users
+- Verified successful script execution during user logon
+
+Result:
+
+A welcome message is displayed automatically when the user signs in.
+
+This demonstrates centralized user logon automation using Active Directory and Group Policy.
+
+![Logon Script GPO](screenshots/logon-script-gpo.png)
+
+![Logon Script Result](screenshots/logon-script-result.png)
+
+
 
 
